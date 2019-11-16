@@ -13,7 +13,12 @@ addItem(itemName, quantity, price) {
     this.items.push(
     { name: itemName, quantity: quantity, pricePerUnit: price })
        }
- 
+
+//Remove items
+clear() {
+    this.items = []
+}
+
    
    module.exports = ShoppingCart
    
