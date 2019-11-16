@@ -14,11 +14,18 @@ addItem(itemName, quantity, price) {
     { name: itemName, quantity: quantity, pricePerUnit: price })
        }
 
-//Remove items
+//Removing items
 clear() {
     this.items = []
 }
 
+// Total value of the shopping cart
+total() {
+    return this.items.reduce((accumulator, currentValue) => {
+        return accumulator + currentValue.pricePerUnit * currentValue.quantity
+ }, 0)
+}
+}
    
-   module.exports = ShoppingCart
+module.exports = ShoppingCart
    
